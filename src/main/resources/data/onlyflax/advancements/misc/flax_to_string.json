@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_flax": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "onlyflax:flax"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "onlyflax:flax_to_string"
+    ]
+  }
+}
