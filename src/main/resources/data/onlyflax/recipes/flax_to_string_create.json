@@ -1,0 +1,26 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "onlyflax:flax"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:string",
+      "count": 1
+    },
+    {
+      "item": "onlyflax:flax_seeds",
+      "count": 1,
+      "chance": 0.1
+    }
+  ],
+  "processingTime": 200,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "onlyflax:flax"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:string",
+      "count": 1
+    }
+  ],
+  "processingTime": 200,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}
