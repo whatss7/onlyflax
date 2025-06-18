@@ -2,5 +2,6 @@
   "parent": "block/crop",
   "textures": {
     "crop": "onlyflax:block/flax_crop_stage0"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

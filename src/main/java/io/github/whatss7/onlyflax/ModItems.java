@@ -22,6 +22,11 @@ public class ModItems {
                     () -> new ItemNameBlockItem(ModBlocks.FLAX_CROP.get(),
                             new Properties().tab(CreativeModeTab.TAB_MATERIALS)));
 
+    public static final RegistryObject<Item> WILD_FLAX =
+            ITEMS.register("wild_flax",
+                    () -> new ItemNameBlockItem(ModBlocks.WILD_FLAX.get(),
+                            new Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+
     public static void register(IEventBus eventBus) {
          ITEMS.register(eventBus);
     }

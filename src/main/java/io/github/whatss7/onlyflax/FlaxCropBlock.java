@@ -1,12 +1,14 @@
 package io.github.whatss7.onlyflax;
 
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class FlaxCropBlock extends CropBlock {
-    public FlaxCropBlock(Properties properties) {
-        super(properties);
+    public FlaxCropBlock() {
+        super(BlockBehaviour.Properties.copy(Blocks.WHEAT));
     }
 
     @NonNull

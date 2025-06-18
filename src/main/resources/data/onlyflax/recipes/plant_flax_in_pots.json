@@ -1,0 +1,38 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "onlyflax:flax_seeds",
+        "onlyflax:flax"
+      ]
+    }
+  ],
+  "type": "botanypots:crop",
+  "seed": {
+    "item": "onlyflax:flax_seeds"
+  },
+  "categories": [
+    "dirt",
+    "farmland"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "onlyflax:flax_crop"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "onlyflax:flax"
+      }
+    },
+    {
+      "chance": 0.05,
+      "output": {
+        "item": "onlyflax:flax_seeds"
+      }
+    }
+  ]
+}

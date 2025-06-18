@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "onlyflax:block/wild_flax"
+  },
+  "render_type": "cutout"
+}

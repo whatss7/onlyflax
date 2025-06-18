@@ -13,6 +13,7 @@ public class OnlyFlaxClient {
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.FLAX_CROP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WILD_FLAX.get(), RenderType.cutout());
         });
     }
 }
