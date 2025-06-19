@@ -1,5 +1,6 @@
-package io.github.whatss7.onlyflax;
+package io.github.whatss7.onlyflax.blocks;
 
+import io.github.whatss7.onlyflax.items.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;

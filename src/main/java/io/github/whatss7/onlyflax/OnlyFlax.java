@@ -1,5 +1,7 @@
 package io.github.whatss7.onlyflax;
 
+import io.github.whatss7.onlyflax.blocks.ModBlocks;
+import io.github.whatss7.onlyflax.items.ModItems;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

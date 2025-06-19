@@ -22,13 +22,6 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "onlyflax:flax_crop",
-                  "properties": { "age": "7" }
-                }
-              ],
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,

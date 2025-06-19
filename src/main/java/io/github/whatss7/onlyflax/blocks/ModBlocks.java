@@ -1,5 +1,6 @@
-package io.github.whatss7.onlyflax;
+package io.github.whatss7.onlyflax.blocks;
 
+import io.github.whatss7.onlyflax.OnlyFlax;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

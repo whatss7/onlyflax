@@ -1,4 +1,4 @@
-package io.github.whatss7.onlyflax;
+package io.github.whatss7.onlyflax.blocks;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BushBlock;

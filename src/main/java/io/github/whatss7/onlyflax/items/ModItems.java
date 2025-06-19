@@ -1,5 +1,7 @@
-package io.github.whatss7.onlyflax;
+package io.github.whatss7.onlyflax.items;
 
+import io.github.whatss7.onlyflax.OnlyFlax;
+import io.github.whatss7.onlyflax.blocks.ModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;

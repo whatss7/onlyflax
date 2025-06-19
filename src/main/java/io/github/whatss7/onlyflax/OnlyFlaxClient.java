@@ -1,5 +1,6 @@
 package io.github.whatss7.onlyflax;
 
+import io.github.whatss7.onlyflax.blocks.ModBlocks;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
