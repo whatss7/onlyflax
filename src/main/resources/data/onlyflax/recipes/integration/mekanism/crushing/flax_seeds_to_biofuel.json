@@ -2,12 +2,12 @@
   "type": "mekanism:crushing",
   "input": {
     "ingredient": {
-      "item": "onlyflax:flax"
+      "item": "onlyflax:flax_seeds"
     }
   },
   "output": {
-    "count": 1,
-    "item": "minecraft:string"
+    "count": 2,
+    "item": "mekanism:bio_fuel"
   },
   "conditions": [
     {

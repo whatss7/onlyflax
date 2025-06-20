@@ -1,7 +1,10 @@
 {
   "item.onlyflax.flax": "Flax",
+  "item.onlyflax.flax_bale": "Flax Bale",
   "item.onlyflax.flax_seeds": "Flax Seeds",
   "item.onlyflax.wild_flax": "Wild Flax",
-  "block.onlyflax.flax_crop": "Flax Crop",
+
+  "block.onlyflax.flax": "Flax",
+  "block.onlyflax.flax_bale": "Flax Bale",
   "block.onlyflax.wild_flax": "Wild Flax"
 }

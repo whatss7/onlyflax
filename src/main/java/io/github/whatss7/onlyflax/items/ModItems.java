@@ -31,11 +31,17 @@ public class ModItems {
                     () -> new ItemNameBlockItem(ModBlocks.WILD_FLAX.get(),
                             new Properties().tab(CreativeModeTab.TAB_MATERIALS)));
 
+    public static final RegistryObject<Item> FLAX_BALE =
+            ITEMS.register("flax_bale",
+                    () -> new ItemNameBlockItem(ModBlocks.FLAX_BALE.get(),
+                            new Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+
     private static void setupCompostValue(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ModItems.FLAX_SEEDS.get(), 0.3F);
             ComposterBlock.COMPOSTABLES.put(ModItems.FLAX.get(), 0.3F);
             ComposterBlock.COMPOSTABLES.put(ModItems.WILD_FLAX.get(), 0.65F);
+            ComposterBlock.COMPOSTABLES.put(ModItems.FLAX_BALE.get(), 0.85F);
         });
     }
 

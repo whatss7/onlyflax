@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "onlyflax:block/flax_bale_vertical" },
+    "axis=z": { "model": "onlyflax:block/flax_bale_horizontal" },
+    "axis=x": { "model": "onlyflax:block/flax_bale_horizontal" }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "immersiveengineering:cloche",
+  "results": [
+    {
+      "item": "onlyflax:flax"
+    },
+    {
+      "item":"onlyflax:flax_seeds",
+      "count":2
+    }
+  ],
+  "input": {
+    "item": "onlyflax:flax_seeds"
+  },
+  "soil": {
+    "item": "minecraft:dirt"
+  },
+  "time": 640,
+  "render": {
+    "type":"crop",
+    "block":"onlyflax:flax"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ]
+}

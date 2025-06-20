@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "onlyflax:block/flax_bale_top",
+    "side": "onlyflax:block/flax_bale_side"
+  }
+}

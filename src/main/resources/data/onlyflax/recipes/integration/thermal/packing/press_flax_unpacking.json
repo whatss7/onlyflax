@@ -1,0 +1,25 @@
+{
+  "type": "thermal:press",
+  "ingredients": [
+    {
+      "item": "onlyflax:flax_bale",
+      "count": 1
+    },
+    {
+      "item": "thermal:press_unpacking_die"
+    }
+  ],
+  "result": [
+    {
+      "item": "onlyflax:flax",
+      "count": 9
+    }
+  ],
+  "energy": 400,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "thermal_expansion"
+    }
+  ]
+}

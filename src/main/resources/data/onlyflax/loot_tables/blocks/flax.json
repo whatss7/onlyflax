@@ -12,6 +12,23 @@
       ]
     },
     {
+      "name": "ripe_flax_drop",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "onlyflax:flax"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "onlyflax:flax",
+          "properties": { "age": "7" }
+        }
+      ]
+    },
+    {
       "name": "ripe_seed_drop",
       "rolls": 1,
       "entries": [
@@ -24,14 +41,14 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "onlyflax:flax_crop",
+                  "block": "onlyflax:flax",
                   "properties": { "age": "7" }
                 }
               ],
               "count": {
                 "type": "minecraft:binomial",
-                "n": 1,
-                "p": 0.5
+                "n": 3,
+                "p": 0.571428
               }
             },
             {
@@ -41,26 +58,9 @@
               "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
               "formula": "binomial_with_bonus_count",
-              "parameters": { "extra": 0, "probability": 0.5 }
+              "parameters": { "extra": 0, "probability": 0.571428 }
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "ripe_flax_drop",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "onlyflax:flax"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "onlyflax:flax_crop",
-          "properties": { "age": "7" }
         }
       ]
     }

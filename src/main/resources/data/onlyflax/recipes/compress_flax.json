@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FFF",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "onlyflax:flax"
+    }
+  },
+  "result": {
+    "item": "onlyflax:flax_bale"
+  }
+}

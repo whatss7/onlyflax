@@ -1,0 +1,23 @@
+{
+  "type": "thermal:insolator",
+  "ingredient": {
+    "item": "onlyflax:flax_seeds"
+  },
+  "result": [
+    {
+      "item": "onlyflax:flax",
+      "chance": 2.5
+    },
+    {
+      "item": "onlyflax:flax_seeds",
+      "chance": 1.1
+    }
+  ],
+  "water_mod": 0.5,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "thermal_expansion"
+    }
+  ]
+}

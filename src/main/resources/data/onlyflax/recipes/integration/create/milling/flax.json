@@ -1,5 +1,5 @@
 {
-  "type": "create:crushing",
+  "type": "create:milling",
   "ingredients": [
     {
       "item": "onlyflax:flax"
@@ -11,12 +11,17 @@
       "count": 1
     },
     {
+      "item": "minecraft:string",
+      "count": 2,
+      "chance": 0.25
+    },
+    {
       "item": "onlyflax:flax_seeds",
       "count": 1,
-      "chance": 0.1
+      "chance": 0.25
     }
   ],
-  "processingTime": 200,
+  "processingTime": 150,
   "conditions": [
     {
       "type": "forge:mod_loaded",

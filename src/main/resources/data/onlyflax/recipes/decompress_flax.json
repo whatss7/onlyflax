@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "onlyflax:flax_bale"
+    }
+  ],
+  "result": {
+    "item": "onlyflax:flax",
+    "count": 9
+  }
+}

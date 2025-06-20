@@ -2,16 +2,20 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "onlyflax:flax"
+      "item": "onlyflax:wild_flax"
     }
   ],
   "results": [
     {
-      "item": "minecraft:string",
+      "item": "onlyflax:flax_seeds",
+      "count": 1
+    },
+    {
+      "item": "minecraft:light_blue_dye",
       "count": 1
     }
   ],
-  "processingTime": 200,
+  "processingTime": 50,
   "conditions": [
     {
       "type": "forge:mod_loaded",
