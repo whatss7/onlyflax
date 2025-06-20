@@ -1,11 +1,12 @@
 package io.github.whatss7.onlyflax;
 
 import io.github.whatss7.onlyflax.blocks.ModBlocks;
+import io.github.whatss7.onlyflax.features.ModFeatures;
 import io.github.whatss7.onlyflax.items.ModItems;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("onlyflax")
@@ -13,16 +14,15 @@ public class OnlyFlax {
     public static final String MOD_ID = "onlyflax";
 
     public OnlyFlax() {
+        // Load config
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OnlyFlaxConfig.COMMON_SPEC);
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // Register items & blocks
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
-        eventBus.addListener(this::commonSetup);
-    }
 
-    private void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(ModItems.FLAX_SEEDS.get(), 0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModItems.FLAX.get(), 0.5F);
-        });
+        // Register wild flax features
+        eventBus.addListener(ModFeatures::registerFeatures);
     }
 }

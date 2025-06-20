@@ -14,7 +14,7 @@ public class OnlyFlaxConfig {
 
     public static class Common {
         public final ForgeConfigSpec.BooleanValue genWildFlax;
-        public final ForgeConfigSpec.IntValue flaxPatchCount;
+        public final ForgeConfigSpec.IntValue wildFlaxRarity;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("worldgen");
@@ -23,9 +23,9 @@ public class OnlyFlaxConfig {
                     .comment("Should wild flax generate naturally?")
                     .define("genWildFlax", true);
 
-            flaxPatchCount = builder
-                    .comment("How dense should wild flax patches generate")
-                    .defineInRange("density", 2, 0, 16);
+            wildFlaxRarity = builder
+                    .comment("How rare should wild flax patches generate? Higher = Rarer")
+                    .defineInRange("wildFlaxRarity", 25, 1, 10000);
 
             builder.pop();
         }
