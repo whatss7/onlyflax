@@ -3,6 +3,7 @@ package io.github.whatss7.onlyflax.blocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -41,17 +42,17 @@ public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     @ParametersAreNonnullByDefault
-    public boolean isBonemealSuccess(Level level, Random rand, BlockPos pos, BlockState state) {
-        return (double) rand.nextFloat() < 0.2F;
+    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+        return randomSource.nextFloat() < 0.2F;
     }
 
     @Override
     @ParametersAreNonnullByDefault
-    public void performBonemeal(ServerLevel level, Random random, BlockPos pos, BlockState state) {
+    public void performBonemeal(ServerLevel level, RandomSource randomSource, BlockPos pos, BlockState state) {
         for (int tries = 0; tries < 5; tries++) {
-            int dx = random.nextInt(3) - 1;
-            int dy = random.nextInt(3) - 1;
-            int dz = random.nextInt(3) - 1;
+            int dx = randomSource.nextInt(3) - 1;
+            int dy = randomSource.nextInt(3) - 1;
+            int dz = randomSource.nextInt(3) - 1;
             BlockPos randomPos = pos.offset(dx, dy, dz);
 
             if (level.isEmptyBlock(randomPos) && state.canSurvive(level, randomPos)) {

@@ -160,26 +160,24 @@ dependencies {
 
 //    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 //
-//    runtimeOnly fg.deobf("curse.maven:jei-238222:5846864")
-//    runtimeOnly fg.deobf("curse.maven:jade-324717:5079263")
-//    runtimeOnly fg.deobf("curse.maven:modnametooltip-238747:3574005")
-//    runtimeOnly fg.deobf("curse.maven:jeii-265917:3812175")
+//    runtimeOnly fg.deobf("curse.maven:jei-238222:5846858")
+//    runtimeOnly fg.deobf("curse.maven:jade-324717:4914105")
 //
-//    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4556713")
-//    runtimeOnly fg.deobf("curse.maven:botanypots-353928:4711512")
+//    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4556697")
+//    runtimeOnly fg.deobf("curse.maven:botanypots-353928:5264073")
 //
-//    runtimeOnly fg.deobf("curse.maven:create-328085:5797603")
+//    runtimeOnly fg.deobf("curse.maven:create-328085:5797604")
 //
-//    runtimeOnly fg.deobf("curse.maven:fd-398521:4679315")
+//    runtimeOnly fg.deobf("curse.maven:fd-398521:5051241")
 //
-//    runtimeOnly fg.deobf("curse.maven:mek-268560:3875976")
+//    runtimeOnly fg.deobf("curse.maven:mek-268560:4644795")
 //
-//    runtimeOnly fg.deobf("curse.maven:cofh-69162:4801048")
-//    runtimeOnly fg.deobf("curse.maven:tf-222880:4788649")
-//    runtimeOnly fg.deobf("curse.maven:te-69163:4782927")
-//    runtimeOnly fg.deobf("curse.maven:tc-271835:4760628")
+//    runtimeOnly fg.deobf("curse.maven:cofh-69162:4801049")
+//    runtimeOnly fg.deobf("curse.maven:tf-222880:4782926")
+//    runtimeOnly fg.deobf("curse.maven:te-69163:4782929")
+//    runtimeOnly fg.deobf("curse.maven:tc-271835:4759902")
 //
-//    runtimeOnly fg.deobf("curse.maven:ie-231951:4412849")
+//    runtimeOnly fg.deobf("curse.maven:ie-231951:5222176")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
