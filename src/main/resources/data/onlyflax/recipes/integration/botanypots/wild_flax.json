@@ -1,0 +1,39 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "onlyflax:wild_flax",
+        "onlyflax:flax"
+      ]
+    }
+  ],
+  "type": "botanypots:crop",
+  "seed": {
+    "item": "onlyflax:wild_flax"
+  },
+  "categories": [
+    "dirt"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "type": "botanypots:aging",
+    "block": "onlyflax:wild_flax"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "onlyflax:flax"
+      },
+      "minRolls": 1,
+      "maxRolls": 2
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ]
+}

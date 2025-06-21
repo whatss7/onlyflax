@@ -5,7 +5,7 @@
     "amount": 100
   },
   "input": {
-    "item": "onlyflax:flax_seed"
+    "item": "onlyflax:flax_seeds"
   },
   "energy": 6400,
   "conditions": [
