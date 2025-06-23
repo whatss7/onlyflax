@@ -6,13 +6,15 @@ A simple Minecraft mod that adds flax crops to Minecraft. Only do that and nothi
 
 ## Supported Versions
 
-Currently Support:
+Currently supports:
 
 - 1.18.2 Forge
+- 1.19.2 Forge
+- 1.19.3 Forge
 
 Plan to support next:
 
-- 1.20.1 Forge
+- 1.19.4 - 1.20.1 Forge
 - 1.20.x NeoForge
 
 ## Integration
