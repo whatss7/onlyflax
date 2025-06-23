@@ -14,18 +14,16 @@ public class OnlyFlaxConfig {
 
     public static class Common {
         public final ForgeConfigSpec.BooleanValue genWildFlax;
-        public final ForgeConfigSpec.IntValue wildFlaxRarity;
 
         public Common(ForgeConfigSpec.Builder builder) {
-            builder.push("worldgen");
+
+            builder.comment("Starting in Minecraft 1.19.3, Only Flax uses JSON files to control the generation of wild flax.\n" +
+                            "To customize world generation, please use a data pack to override the default behavior.")
+                    .push("worldgen");
 
             genWildFlax = builder
                     .comment("Should wild flax generate naturally?")
                     .define("genWildFlax", true);
-
-            wildFlaxRarity = builder
-                    .comment("How rare should wild flax patches generate? Higher = Rarer")
-                    .defineInRange("wildFlaxRarity", 25, 1, 10000);
 
             builder.pop();
         }

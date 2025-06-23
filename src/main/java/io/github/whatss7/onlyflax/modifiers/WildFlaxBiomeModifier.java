@@ -2,6 +2,7 @@ package io.github.whatss7.onlyflax.modifiers;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import io.github.whatss7.onlyflax.OnlyFlaxConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
@@ -27,6 +28,8 @@ public class WildFlaxBiomeModifier implements BiomeModifier {
     @Override
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
         if (phase != Phase.ADD) return;
+
+        if (!OnlyFlaxConfig.COMMON.genWildFlax.get()) return;
 
         if (biome.is(BiomeTags.IS_NETHER) || biome.is(BiomeTags.IS_END)) return;
 
