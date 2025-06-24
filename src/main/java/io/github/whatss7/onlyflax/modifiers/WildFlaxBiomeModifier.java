@@ -45,4 +45,3 @@ public class WildFlaxBiomeModifier implements BiomeModifier {
         return CODEC;
     }
 }
-

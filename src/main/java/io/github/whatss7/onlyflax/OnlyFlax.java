@@ -4,7 +4,6 @@ import io.github.whatss7.onlyflax.blocks.ModBlocks;
 import io.github.whatss7.onlyflax.modifiers.ModBiomeModifiers;
 import io.github.whatss7.onlyflax.items.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -13,12 +12,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class OnlyFlax {
     public static final String MOD_ID = "onlyflax";
 
-    public OnlyFlax() {
+    public OnlyFlax(FMLJavaModLoadingContext context) {
         // Load config
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OnlyFlaxConfig.COMMON_SPEC);
+        context.registerConfig(ModConfig.Type.COMMON, OnlyFlaxConfig.COMMON_SPEC);
 
         // Get eventBus
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = context.getModEventBus();
 
         // Register items & blocks
         ModBlocks.register(eventBus);
