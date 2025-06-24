@@ -3,6 +3,8 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -120,6 +122,16 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+
+    maven {
+        name = "CurseForge"
+        url = "https://cursemaven.com"
+    }
+
+    maven {
+        name = "SpongePowered"
+        url = "https://repo.spongepowered.org/repository/maven-public/"
+    }
 }
 
 dependencies {
@@ -144,6 +156,27 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    runtimeOnly fg.deobf("curse.maven:jei-238222:6600311")
+    runtimeOnly fg.deobf("curse.maven:jade-324717:6271651")
+
+    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:5423987")
+    runtimeOnly fg.deobf("curse.maven:botany-pots-353928:6348581")
+
+    runtimeOnly fg.deobf("curse.maven:create-328085:6641603")
+
+    runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:6597298")
+
+    runtimeOnly fg.deobf("curse.maven:mekanism-268560:6552911")
+
+    runtimeOnly fg.deobf("curse.maven:cofh-core-69162:5374122")
+    runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:5443583")
+    runtimeOnly fg.deobf("curse.maven:thermal-expansion-69163:5372749")
+    runtimeOnly fg.deobf("curse.maven:thermal-cultivation-271835:5372746")
+
+    runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:6206989")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

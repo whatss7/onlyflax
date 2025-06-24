@@ -6,8 +6,8 @@
     }
   },
   "output": {
-    "count": 2,
-    "item": "minecraft:string"
+    "count": 5,
+    "item": "mekanism:bio_fuel"
   },
   "conditions": [
     {

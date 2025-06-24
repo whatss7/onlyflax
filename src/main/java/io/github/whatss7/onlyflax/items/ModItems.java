@@ -35,7 +35,7 @@ public class ModItems {
     private static void setupCompostValue(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ModItems.FLAX_SEEDS.get(), 0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModItems.FLAX.get(), 0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModItems.FLAX.get(), 0.65F);
             ComposterBlock.COMPOSTABLES.put(ModItems.WILD_FLAX.get(), 0.65F);
             ComposterBlock.COMPOSTABLES.put(ModItems.FLAX_BALE.get(), 0.85F);
         });

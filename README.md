@@ -11,11 +11,12 @@ Currently supports:
 - 1.18.2 Forge
 - 1.19.2 Forge
 - 1.19.3 Forge
+- 1.19.4 Forge
+- 1.20.1 Forge
 
 Plan to support next:
 
-- 1.19.4 - 1.20.1 Forge
-- 1.20.x NeoForge
+- 1.20.1 - 1.21.6 NeoForge
 
 ## Integration
 
