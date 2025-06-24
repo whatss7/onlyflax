@@ -3,8 +3,6 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
-
-    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -76,9 +74,6 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
-            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', mod_id
-
             mods {
                 "${mod_id}" {
                     source sourceSets.main
@@ -125,16 +120,6 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
-
-    maven {
-        name = "CurseForge"
-        url = "https://cursemaven.com"
-    }
-
-    maven {
-        name = "SpongePowered"
-        url = "https://repo.spongepowered.org/repository/maven-public/"
-    }
 }
 
 dependencies {
@@ -159,27 +144,6 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-
-    runtimeOnly fg.deobf("curse.maven:jei-238222:5846852")
-    runtimeOnly fg.deobf("curse.maven:jade-324717:4573063")
-
-    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4570842")
-    runtimeOnly fg.deobf("curse.maven:botany-pots-353928:4722637")
-
-    // runtimeOnly fg.deobf("curse.maven:create-328085:5797604") not available for 1.19.4
-
-    // runtimeOnly fg.deobf("curse.maven:fd-398521:5051241") not available for 1.19.4
-
-    // runtimeOnly fg.deobf("curse.maven:mek-268560:4644795") not available for 1.19.4
-
-    // runtimeOnly fg.deobf("curse.maven:cofh-69162:4801049") not available for 1.19.4
-    // runtimeOnly fg.deobf("curse.maven:tf-222880:4782926")
-    // runtimeOnly fg.deobf("curse.maven:te-69163:4782929")
-    // runtimeOnly fg.deobf("curse.maven:tc-271835:4759902")
-
-    runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:4780685")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
