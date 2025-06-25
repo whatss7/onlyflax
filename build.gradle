@@ -4,7 +4,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 
-    // id 'org.spongepowered.mixin' version '0.7.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -55,7 +55,7 @@ minecraft {
     // However, it must be at "META-INF/accesstransformer.cfg" in the final mod jar to be loaded by Forge.
     // This default location is a best practice to automatically put the file in the right place in the final jar.
     // See https://docs.minecraftforge.net/en/latest/advanced/accesstransformers/ for more information.
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -125,15 +125,15 @@ repositories {
     //     dir 'libs'
     // }
 
-//    maven {
-//        name = "CurseForge"
-//        url = "https://cursemaven.com"
-//    }
-//
-//    maven {
-//        name = "SpongePowered"
-//        url = "https://repo.spongepowered.org/repository/maven-public/"
-//    }
+    maven {
+        name = "CurseForge"
+        url = "https://cursemaven.com"
+    }
+
+    maven {
+        name = "SpongePowered"
+        url = "https://repo.spongepowered.org/repository/maven-public/"
+    }
 }
 
 dependencies {
@@ -158,28 +158,28 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-//    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-//
-//    runtimeOnly fg.deobf("curse.maven:jei-238222:5846864")
-//    runtimeOnly fg.deobf("curse.maven:jade-324717:5079263")
-//    runtimeOnly fg.deobf("curse.maven:modnametooltip-238747:3574005")
-//    runtimeOnly fg.deobf("curse.maven:jeii-265917:3812175")
-//
-//    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4556713")
-//    runtimeOnly fg.deobf("curse.maven:botanypots-353928:4711512")
-//
-//    runtimeOnly fg.deobf("curse.maven:create-328085:5797603")
-//
-//    runtimeOnly fg.deobf("curse.maven:fd-398521:4679315")
-//
-//    runtimeOnly fg.deobf("curse.maven:mek-268560:3875976")
-//
-//    runtimeOnly fg.deobf("curse.maven:cofh-69162:4801048")
-//    runtimeOnly fg.deobf("curse.maven:tf-222880:4788649")
-//    runtimeOnly fg.deobf("curse.maven:te-69163:4782927")
-//    runtimeOnly fg.deobf("curse.maven:tc-271835:4760628")
-//
-//    runtimeOnly fg.deobf("curse.maven:ie-231951:4412849")
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    runtimeOnly fg.deobf("curse.maven:jei-238222:5846864")
+    runtimeOnly fg.deobf("curse.maven:jade-324717:5079263")
+    runtimeOnly fg.deobf("curse.maven:modnametooltip-238747:3574005")
+    runtimeOnly fg.deobf("curse.maven:jeii-265917:3812175")
+
+    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:4556713")
+    runtimeOnly fg.deobf("curse.maven:botanypots-353928:4711512")
+
+    runtimeOnly fg.deobf("curse.maven:create-328085:5797603")
+
+    runtimeOnly fg.deobf("curse.maven:fd-398521:4679315")
+
+    runtimeOnly fg.deobf("curse.maven:mek-268560:3875976")
+
+    runtimeOnly fg.deobf("curse.maven:cofh-69162:4801048")
+    runtimeOnly fg.deobf("curse.maven:tf-222880:4788649")
+    runtimeOnly fg.deobf("curse.maven:te-69163:4782927")
+    runtimeOnly fg.deobf("curse.maven:tc-271835:4760628")
+
+    runtimeOnly fg.deobf("curse.maven:ie-231951:4412849")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

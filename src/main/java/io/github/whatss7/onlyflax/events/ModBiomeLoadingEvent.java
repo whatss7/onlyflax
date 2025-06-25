@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = OnlyFlax.MOD_ID)
-public class ModEvents {
+public class ModBiomeLoadingEvent {
     @SubscribeEvent
     public static void onBiomeLoading(BiomeLoadingEvent event) {
         if (!OnlyFlaxConfig.COMMON.genWildFlax.get()) {

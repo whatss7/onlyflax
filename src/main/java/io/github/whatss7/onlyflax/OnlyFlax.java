@@ -19,8 +19,9 @@ public class OnlyFlax {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register items & blocks
-        ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModItems.register(eventBus);
+        ModItems.setupItemUsages(eventBus);
 
         // Register wild flax features
         eventBus.addListener(ModFeatures::registerFeatures);
