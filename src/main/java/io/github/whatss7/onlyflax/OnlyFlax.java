@@ -22,6 +22,7 @@ public class OnlyFlax {
         // Register items & blocks
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
+        ModItems.setupItemUsages(eventBus);
 
         // Register wild flax features
         ModBiomeModifiers.register(eventBus);
