@@ -4,6 +4,8 @@
 
 A simple Minecraft mod that adds flax crops to Minecraft. Only do that and nothing else.
 
+Get seeds from naturally generated wild flax, and plant them like any other crop. You can craft string from flax you harvested.
+
 ## Supported Versions
 
 Currently supports:
