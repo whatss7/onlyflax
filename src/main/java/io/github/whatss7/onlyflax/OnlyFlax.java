@@ -3,6 +3,7 @@ package io.github.whatss7.onlyflax;
 import io.github.whatss7.onlyflax.blocks.ModBlocks;
 import io.github.whatss7.onlyflax.modifiers.ModBiomeModifiers;
 import io.github.whatss7.onlyflax.items.ModItems;
+import net.minecraft.client.model.ModelUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +24,7 @@ public class OnlyFlax {
         // Register items & blocks
         ModBlocks.register(eventBus);
         ModItems.register(eventBus);
+        ModItems.setupItemUsages(eventBus);
 
         // Register wild flax features
         ModBiomeModifiers.register(eventBus);
