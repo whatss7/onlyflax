@@ -38,13 +38,6 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "onlyflax:flax",
-                  "properties": { "age": "7" }
-                }
-              ],
               "count": {
                 "type": "minecraft:binomial",
                 "n": 3,
@@ -61,6 +54,13 @@
               "parameters": { "extra": 0, "probability": 0.571428 }
             }
           ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "onlyflax:flax",
+          "properties": { "age": "7" }
         }
       ]
     }

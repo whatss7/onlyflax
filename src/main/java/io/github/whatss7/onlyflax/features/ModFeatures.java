@@ -1,6 +1,5 @@
 package io.github.whatss7.onlyflax.features;
 
-import com.mojang.serialization.Codec;
 import io.github.whatss7.onlyflax.OnlyFlax;
 import io.github.whatss7.onlyflax.OnlyFlaxConfig;
 import io.github.whatss7.onlyflax.blocks.ModBlocks;
@@ -13,16 +12,13 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConf
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 
 public class ModFeatures {
     public static Holder<ConfiguredFeature<?, ?>> WILD_FLAX_CONFIGURED_FEATURE;
-    public static Holder<PlacedFeature> WILD_FLAX_FEATURE;
+    public static Holder<PlacedFeature> WILD_FLAX_PLACED_FEATURE;
 
     public static void registerFeatures(final FMLCommonSetupEvent event) {
         ConfiguredFeature<?, ?> configuredFeature = new ConfiguredFeature<>(
@@ -50,9 +46,9 @@ public class ModFeatures {
                         BiomeFilter.biome()
                 ));
 
-        WILD_FLAX_FEATURE = BuiltinRegistries.register(
+        WILD_FLAX_PLACED_FEATURE = BuiltinRegistries.register(
                 BuiltinRegistries.PLACED_FEATURE,
-                ResourceLocation.fromNamespaceAndPath(OnlyFlax.MOD_ID, "wild_flax_feature"),
+                ResourceLocation.fromNamespaceAndPath(OnlyFlax.MOD_ID, "wild_flax_placed_feature"),
                 placedFeature);
     }
 }

@@ -1,0 +1,18 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "item": "onlyflax:wild_flax"
+    }
+  },
+  "output": {
+    "count": 5,
+    "item": "mekanism:bio_fuel"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

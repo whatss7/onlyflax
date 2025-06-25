@@ -5,7 +5,6 @@ import io.github.whatss7.onlyflax.modifiers.ModBiomeModifiers;
 import io.github.whatss7.onlyflax.features.ModFeatures;
 import io.github.whatss7.onlyflax.items.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -22,11 +21,12 @@ public class OnlyFlax {
         IEventBus eventBus = context.getModEventBus();
 
         // Register items & blocks
-        ModItems.register(eventBus);
         ModBlocks.register(eventBus);
-        ModBiomeModifiers.register(eventBus);
+        ModItems.register(eventBus);
+        ModItems.setupItemUsages(eventBus);
 
         // Register wild flax features
+        ModBiomeModifiers.register(eventBus);
         eventBus.addListener(ModFeatures::registerFeatures);
     }
 }

@@ -1,5 +1,5 @@
 {
   "type": "onlyflax:add_wild_flax_feature",
-  "feature": "onlyflax:wild_flax_feature",
+  "feature": "onlyflax:wild_flax_placed_feature",
   "step": "vegetal_decoration"
 }
