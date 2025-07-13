@@ -10,13 +10,19 @@ Get seeds from naturally generated wild flax, and plant them like any other crop
 
 Currently supports:
 
-- 1.18.2 Forge
-- 1.19.2 Forge
-- 1.19.3 Forge
-- 1.19.4 Forge
-- 1.20.1 Forge
+### Forge
 
-Plan to support next:
+- 1.18.2
+- 1.19.2
+- 1.19.3
+- 1.19.4
+- 1.20.1
+
+### NeoForge
+
+- 1.20.1
+
+### Plan to support next
 
 - 1.20.1 - 1.21.6 NeoForge
 
@@ -26,6 +32,7 @@ This mod can work with:
 
 - Botany Pots
 - Create
+- Ender IO
 - Farmer's Delight
 - Immersive Engineering
 - Mekanism
