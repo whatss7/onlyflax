@@ -36,7 +36,7 @@ public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     @ParametersAreNonnullByDefault
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean b) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
         return true;
     }
 

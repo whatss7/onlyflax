@@ -3,9 +3,9 @@ package io.github.whatss7.onlyflax.events;
 import io.github.whatss7.onlyflax.OnlyFlax;
 import io.github.whatss7.onlyflax.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod.EventBusSubscriber(modid = OnlyFlax.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTabEvent {

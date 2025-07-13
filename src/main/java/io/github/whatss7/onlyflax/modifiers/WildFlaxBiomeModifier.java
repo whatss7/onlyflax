@@ -8,14 +8,16 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraftforge.common.world.BiomeModifier;
-import net.minecraftforge.common.world.ModifiableBiomeInfo;
+import net.neoforged.neoforge.common.world.BiomeModifier;
+import net.neoforged.neoforge.common.world.ModifiableBiomeInfo;
 
 public class WildFlaxBiomeModifier implements BiomeModifier {
-    public static final Codec<WildFlaxBiomeModifier> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            PlacedFeature.CODEC.fieldOf("feature").forGetter(m -> m.feature),
-            GenerationStep.Decoration.CODEC.fieldOf("step").forGetter(m -> m.step)
-    ).apply(instance, WildFlaxBiomeModifier::new));
+    public static final Codec<WildFlaxBiomeModifier> CODEC = RecordCodecBuilder.create(
+        instance -> instance.group(
+                PlacedFeature.CODEC.fieldOf("feature").forGetter(m -> m.feature),
+                GenerationStep.Decoration.CODEC.fieldOf("step").forGetter(m -> m.step)
+        ).apply(instance, WildFlaxBiomeModifier::new)
+    );
 
     private final Holder<PlacedFeature> feature;
     private final GenerationStep.Decoration step;
@@ -33,7 +35,7 @@ public class WildFlaxBiomeModifier implements BiomeModifier {
 
         if (biome.is(BiomeTags.IS_NETHER) || biome.is(BiomeTags.IS_END)) return;
 
-        float temperature = biome.get().getBaseTemperature();
+        float temperature = biome.value().getBaseTemperature();
 
         if (temperature > 0.3f && temperature < 0.85f) {
             builder.getGenerationSettings().addFeature(step, feature);

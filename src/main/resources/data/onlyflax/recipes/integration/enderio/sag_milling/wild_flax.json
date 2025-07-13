@@ -33,5 +33,11 @@
       },
       "optional": false
     }
+  ],
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
   ]
 }
