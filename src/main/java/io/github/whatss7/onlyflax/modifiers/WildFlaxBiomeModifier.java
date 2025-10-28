@@ -1,6 +1,7 @@
 package io.github.whatss7.onlyflax.modifiers;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.github.whatss7.onlyflax.OnlyFlaxConfig;
 import net.minecraft.core.Holder;
@@ -15,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class WildFlaxBiomeModifier implements BiomeModifier {
-    public static final Codec<WildFlaxBiomeModifier> CODEC = RecordCodecBuilder.create(
+    public static final MapCodec<WildFlaxBiomeModifier> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
                     PlacedFeature.CODEC.fieldOf("feature").forGetter(m -> m.feature),
                     GenerationStep.Decoration.CODEC.fieldOf("step").forGetter(m -> m.step))
@@ -50,7 +51,7 @@ public class WildFlaxBiomeModifier implements BiomeModifier {
 
     @Override
     @NotNull
-    public Codec<? extends BiomeModifier> codec() {
+    public MapCodec<? extends BiomeModifier> codec() {
         return CODEC;
     }
 }

@@ -4,10 +4,10 @@ import io.github.whatss7.onlyflax.OnlyFlax;
 import io.github.whatss7.onlyflax.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
-@Mod.EventBusSubscriber(modid = OnlyFlax.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = OnlyFlax.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTabEvent {
     @SubscribeEvent
     public static void buildCreativeTabContents(BuildCreativeModeTabContentsEvent event) {

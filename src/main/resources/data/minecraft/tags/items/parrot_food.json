@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#forge:crops/flax"
+    "onlyflax:flax_seeds"
   ]
 }

@@ -23,10 +23,11 @@ Currently supports:
 - 1.20.1
 - 1.20.2
 - 1.20.4
+- 1.20.6
 
 ### Plan to support next
 
-- 1.20.6 - 1.21.6 NeoForge
+- 1.21 - 1.21.6 NeoForge
 
 ## Integration
 
