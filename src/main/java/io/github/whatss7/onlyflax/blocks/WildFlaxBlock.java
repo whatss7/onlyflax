@@ -1,5 +1,6 @@
 package io.github.whatss7.onlyflax.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -13,23 +14,25 @@ import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
+    public static final MapCodec<WildFlaxBlock> CODEC = MapCodec.unit(WildFlaxBlock::new);
+
     public WildFlaxBlock() {
-        super(BlockBehaviour.Properties.copy(Blocks.GRASS)
-                .noCollission()
-                .instabreak()
-                .sound(SoundType.GRASS));
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS));
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         return 100;
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         return 60;
     }
@@ -60,5 +63,11 @@ public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
                 break;
             }
         }
+    }
+
+    @Override
+    @NotNull
+    protected MapCodec<? extends BushBlock> codec() {
+        return CODEC;
     }
 }

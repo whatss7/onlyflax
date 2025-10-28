@@ -1,23 +1,21 @@
 {
   "type": "immersiveengineering:crusher",
-  "secondaries": [
-    {
-      "chance": 1.0,
-      "output": {
-        "item": "minecraft:light_blue_dye",
-        "count": 1
-      }
-    }
-  ],
-  "result": {
-    "base_ingredient": {
-      "item": "onlyflax:flax_seeds"
-    }
-  },
+  "energy": 3200,
   "input": {
     "item": "onlyflax:wild_flax"
   },
-  "energy": 3200,
+  "result": {
+    "item": "onlyflax:flax_seeds"
+  },
+  "secondaries": [
+    {
+      "chance": 1.0,
+      "conditions": [],
+      "output": {
+        "item": "minecraft:light_blue_dye"
+      }
+    }
+  ],
   "conditions": [
     {
       "type": "neoforge:mod_loaded",

@@ -9,19 +9,21 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
 public class FlaxBaleBlock extends HayBlock {
     FlaxBaleBlock() {
-        super(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)
-                .strength(0.5f)
-                .sound(SoundType.GRASS));
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).strength(0.5f).sound(SoundType.GRASS));
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         return 20;
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         return 60;
     }

@@ -1,0 +1,16 @@
+{
+  "values": {
+    "onlyflax:flax_seeds": {
+      "chance": 0.3
+    },
+    "onlyflax:flax": {
+      "chance": 0.65
+    },
+    "onlyflax:wild_flax": {
+      "chance": 0.65
+    },
+    "onlyflax:flax_bale": {
+      "chance": 0.85
+    }
+  }
+}

@@ -9,7 +9,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class FlaxCropBlock extends CropBlock {
     public FlaxCropBlock() {
-        super(BlockBehaviour.Properties.copy(Blocks.WHEAT));
+        super(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT));
     }
 
     @NonNull

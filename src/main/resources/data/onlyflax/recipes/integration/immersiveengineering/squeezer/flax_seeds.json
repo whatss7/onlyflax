@@ -1,13 +1,13 @@
 {
   "type":"immersiveengineering:squeezer",
+  "energy": 6400,
   "fluid": {
-    "fluid": "immersiveengineering:plantoil",
-    "amount": 100
+    "FluidName": "immersiveengineering:plantoil",
+    "Amount": 100
   },
   "input": {
     "item": "onlyflax:flax_seeds"
   },
-  "energy": 6400,
   "conditions": [
     {
       "type": "neoforge:mod_loaded",

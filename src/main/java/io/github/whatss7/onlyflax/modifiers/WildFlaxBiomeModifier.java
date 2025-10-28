@@ -10,14 +10,16 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.ModifiableBiomeInfo;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.ParametersAreNonnullByDefault;
 
 public class WildFlaxBiomeModifier implements BiomeModifier {
     public static final Codec<WildFlaxBiomeModifier> CODEC = RecordCodecBuilder.create(
-        instance -> instance.group(
-                PlacedFeature.CODEC.fieldOf("feature").forGetter(m -> m.feature),
-                GenerationStep.Decoration.CODEC.fieldOf("step").forGetter(m -> m.step)
-        ).apply(instance, WildFlaxBiomeModifier::new)
-    );
+            instance -> instance.group(
+                    PlacedFeature.CODEC.fieldOf("feature").forGetter(m -> m.feature),
+                    GenerationStep.Decoration.CODEC.fieldOf("step").forGetter(m -> m.step))
+                    .apply(instance, WildFlaxBiomeModifier::new));
 
     private final Holder<PlacedFeature> feature;
     private final GenerationStep.Decoration step;
@@ -28,12 +30,16 @@ public class WildFlaxBiomeModifier implements BiomeModifier {
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-        if (phase != Phase.ADD) return;
+        if (phase != Phase.ADD)
+            return;
 
-        if (!OnlyFlaxConfig.COMMON.genWildFlax.get()) return;
+        if (!OnlyFlaxConfig.COMMON.genWildFlax.get())
+            return;
 
-        if (biome.is(BiomeTags.IS_NETHER) || biome.is(BiomeTags.IS_END)) return;
+        if (biome.is(BiomeTags.IS_NETHER) || biome.is(BiomeTags.IS_END))
+            return;
 
         float temperature = biome.value().getBaseTemperature();
 
@@ -43,6 +49,7 @@ public class WildFlaxBiomeModifier implements BiomeModifier {
     }
 
     @Override
+    @NotNull
     public Codec<? extends BiomeModifier> codec() {
         return CODEC;
     }
