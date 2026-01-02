@@ -1,0 +1,17 @@
+{
+  "type":"immersiveengineering:squeezer",
+  "energy": 6400,
+  "input": {
+    "item": "onlyflax:flax_seeds"
+  },
+  "fluid": {
+    "amount": 100,
+    "id": "immersiveengineering:plantoil"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ]
+}

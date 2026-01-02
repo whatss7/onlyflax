@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "onlyflax:wild_flax"
+    }
+  ],
+  "results": [
+    {
+      "id": "onlyflax:flax_seeds",
+      "count": 1
+    },
+    {
+      "id": "minecraft:light_blue_dye",
+      "count": 1
+    }
+  ],
+  "processingTime": 50,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}
