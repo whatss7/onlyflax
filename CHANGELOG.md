@@ -2,4 +2,4 @@
 
 ## 1.0.3
 
-- Ported to NeoForge 1.21
+- Ported to NeoForge 1.21.1

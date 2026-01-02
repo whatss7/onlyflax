@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.1.13'
+    id 'net.neoforged.gradle.userdev' version '7.1.20'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -24,7 +24,7 @@ base {
     archivesName = mod_id
 }
 
-// Mojang ships Java 21 to end users in 1.21, so mods should target Java 21.
+// Mojang ships Java 21 to end users in 1.21.1, so mods should target Java 21.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 //minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -133,8 +133,6 @@ tasks.withType(ProcessResources).configureEach {
             mod_name               : mod_name,
             mod_license            : mod_license,
             mod_version            : mod_version,
-            mod_authors            : mod_authors,
-            mod_description        : mod_description
     ]
     inputs.properties replaceProperties
 
@@ -187,25 +185,26 @@ repositories {
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    runtimeOnly "curse.maven:jei-238222:5609864"
-    runtimeOnly "curse.maven:jade-324717:5591256"
-    runtimeOnly "curse.maven:patchouli-306770:6840034"
+    runtimeOnly "curse.maven:jei-238222:7391682"
+    runtimeOnly "curse.maven:jade-324717:6853386"
+    runtimeOnly "curse.maven:patchouli-306770:6842247"
 
-    runtimeOnly "curse.maven:bookshelf-228525:6412610"
-    // runtimeOnly "curse.maven:botany-pots-353928:6002839" // no 1.21
+    runtimeOnly "curse.maven:bookshelf-228525:7335846"
+    runtimeOnly "curse.maven:prickle-1023259:6961457"
+    runtimeOnly "curse.maven:botany-pots-353928:7115287"
 
-    // runtimeOnly "curse.maven:create-328085:6641603" // no 1.21
+    runtimeOnly "curse.maven:create-328085:7408951"
 
-    runtimeOnly "curse.maven:farmers-delight-398521:5566383"
+    runtimeOnly "curse.maven:farmers-delight-398521:6917256"
 
-    runtimeOnly "curse.maven:mekanism-268560:5574951"
+    runtimeOnly "curse.maven:mekanism-268560:7132168"
 
-    // runtimeOnly "curse.maven:cofh-core-69162:5374122" // no 1.21
-    // runtimeOnly "curse.maven:thermal-foundation-222880:5443583" // no 1.21
-    // runtimeOnly "curse.maven:thermal-expansion-69163:5372749" // no 1.21
-    // runtimeOnly "curse.maven:thermal-cultivation-271835:5372746" // no 1.21
+    // runtimeOnly "curse.maven:cofh-core-69162:5374122" // no 1.21.1
+    // runtimeOnly "curse.maven:thermal-foundation-222880:5443583" // no 1.21.1
+    // runtimeOnly "curse.maven:thermal-expansion-69163:5372749" // no 1.21.1
+    // runtimeOnly "curse.maven:thermal-cultivation-271835:5372746" // no 1.21.1
 
-    // runtimeOnly "curse.maven:immersive-engineering-231951:6213776" // no 1.21
+    runtimeOnly "curse.maven:immersive-engineering-231951:6733669"
 
-    // runtimeOnly "curse.maven:ender-io-64578:5771156"  // not compatible with mekanism
+    runtimeOnly "curse.maven:ender-io-64578:7204349"
 }

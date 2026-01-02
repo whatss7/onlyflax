@@ -41,11 +41,11 @@ displayName="${mod_name}" #mandatory
 # A text field displayed in the mod UI
 #credits="" #optional
 
-# A text field displayed in the mod UI
-authors="${mod_authors}" #optional
+# The authors of the mod, displayed in the mod UI (optional)
+authors="whatss7"
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''${mod_description}'''
+description="Adds flax crops to Minecraft. Only do that and nothing else."
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
