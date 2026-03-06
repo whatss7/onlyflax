@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
   "type": "create:milling",
   "ingredients": [
     {
@@ -21,11 +27,5 @@
       "chance": 0.25
     }
   ],
-  "processingTime": 150,
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "create"
-    }
-  ]
+  "processingTime": 150
 }
