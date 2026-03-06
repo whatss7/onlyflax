@@ -1,37 +1,50 @@
 {
-  "type": "enderio:sag_milling",
-  "energy": 2400,
-  "input": {
-    "item": "onlyflax:wild_flax"
-  },
-  "outputs": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "chance": 1.0,
-      "item": {
-        "item": "onlyflax:flax_seeds"
-      },
-      "optional": false
-    },
-    {
-      "chance": 0.6,
-      "item": {
-        "item": "enderio:plant_matter_green"
-      },
-      "optional": false
-    },
-    {
-      "chance": 0.3,
-      "item": {
-        "item": "enderio:plant_matter_green"
-      },
-      "optional": false
-    },
-    {
-      "chance": 0.1,
-      "item": {
-        "item": "enderio:plant_matter_green"
-      },
-      "optional": false
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "enderio"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "item": "onlyflax:wild_flax"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "item": "onlyflax:flax_seeds"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.6,
+            "item": {
+              "item": "enderio:plant_matter_green"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.3,
+            "item": {
+              "item": "enderio:plant_matter_green"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.1,
+            "item": {
+              "item": "enderio:plant_matter_green"
+            },
+            "optional": false
+          }
+        ]
+      }
     }
   ]
 }

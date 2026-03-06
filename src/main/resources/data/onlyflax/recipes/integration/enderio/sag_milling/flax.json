@@ -1,24 +1,37 @@
 {
-  "type": "enderio:sag_milling",
-  "energy": 2400,
-  "input": {
-    "item": "onlyflax:flax"
-  },
-  "outputs": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "chance": 1.0,
-      "item": {
-        "count": 2,
-        "item": "minecraft:string"
-      },
-      "optional": false
-    },
-    {
-      "chance": 0.2,
-      "item": {
-        "item": "onlyflax:flax_seeds"
-      },
-      "optional": true
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "enderio"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "item": "onlyflax:flax"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 2,
+              "item": "minecraft:string"
+            },
+            "optional": false
+          },
+          {
+            "chance": 0.2,
+            "item": {
+              "item": "onlyflax:flax_seeds"
+            },
+            "optional": true
+          }
+        ]
+      }
     }
   ]
 }
