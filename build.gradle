@@ -24,7 +24,7 @@ base {
     archivesName = mod_id
 }
 
-// Mojang ships Java 21 to end users in 1.21.4, so mods should target Java 21.
+// Mojang ships Java 21 to end users in 1.21.5, so mods should target Java 21.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 //minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -128,7 +128,6 @@ tasks.withType(ProcessResources).configureEach {
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
             neo_version            : neo_version,
-            loader_version_range   : loader_version_range,
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,
@@ -185,26 +184,26 @@ repositories {
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    runtimeOnly "curse.maven:jei-238222:6557699"
-    runtimeOnly "curse.maven:jade-324717:6170888"
-    // runtimeOnly "curse.maven:patchouli-306770:6842247" // no 1.21.4
+    runtimeOnly "curse.maven:jei-238222:6767951"
+    runtimeOnly "curse.maven:jade-324717:6524708"
+    // runtimeOnly "curse.maven:patchouli-306770:6842247" // no 1.21.5
 
-    // runtimeOnly "curse.maven:bookshelf-228525:7335846" // no 1.21.4
-    // runtimeOnly "curse.maven:prickle-1023259:6914041"
-    // runtimeOnly "curse.maven:botany-pots-353928:7115287" // no 1.21.4
+    // runtimeOnly "curse.maven:bookshelf-228525:7335846" // no 1.21.5
+    // runtimeOnly "curse.maven:prickle-1023259:6914059"
+    // runtimeOnly "curse.maven:botany-pots-353928:7115287" // no 1.21.5
 
-    // runtimeOnly "curse.maven:create-328085:7408951" // no 1.21.4
+    // runtimeOnly "curse.maven:create-328085:7408951" // no 1.21.5
 
-    // runtimeOnly "curse.maven:farmers-delight-398521:6917256" // no 1.21.4
+    // runtimeOnly "curse.maven:farmers-delight-398521:6917256" // no 1.21.5
 
-    // runtimeOnly "curse.maven:mekanism-268560:7132168" // no 1.21.4
+    // runtimeOnly "curse.maven:mekanism-268560:7132168" // no 1.21.5
 
-    // runtimeOnly "curse.maven:cofh-core-69162:5374122" // no 1.21.4
-    // runtimeOnly "curse.maven:thermal-foundation-222880:5443583" // no 1.21.4
-    // runtimeOnly "curse.maven:thermal-expansion-69163:5372749" // no 1.21.4
-    // runtimeOnly "curse.maven:thermal-cultivation-271835:5372746" // no 1.21.4
+    // runtimeOnly "curse.maven:cofh-core-69162:5374122" // no 1.21.5
+    // runtimeOnly "curse.maven:thermal-foundation-222880:5443583" // no 1.21.5
+    // runtimeOnly "curse.maven:thermal-expansion-69163:5372749" // no 1.21.5
+    // runtimeOnly "curse.maven:thermal-cultivation-271835:5372746" // no 1.21.5
 
-    // runtimeOnly "curse.maven:immersive-engineering-231951:6733669" // no 1.21.4
+    // runtimeOnly "curse.maven:immersive-engineering-231951:6733669" // no 1.21.5
 
-    // runtimeOnly "curse.maven:ender-io-64578:7204349" // no 1.21.4
+    // runtimeOnly "curse.maven:ender-io-64578:7204349" // no 1.21.5
 }

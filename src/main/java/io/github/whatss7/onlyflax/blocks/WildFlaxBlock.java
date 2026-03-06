@@ -1,6 +1,5 @@
 package io.github.whatss7.onlyflax.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -12,16 +11,14 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
+public class WildFlaxBlock extends BushBlock {
     public WildFlaxBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
@@ -70,11 +67,5 @@ public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
                 break;
             }
         }
-    }
-
-    @Override
-    @NotNull
-    protected MapCodec<? extends BushBlock> codec() {
-        return ModBlocks.WILD_FLAX_CODEC.get();
     }
 }

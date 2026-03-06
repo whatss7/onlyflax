@@ -26,12 +26,4 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
-
-    public static final DeferredRegister<MapCodec<? extends Block>> REGISTRAR =
-            DeferredRegister.create(BuiltInRegistries.BLOCK_TYPE, OnlyFlax.MOD_ID);
-
-    public static final Supplier<MapCodec<WildFlaxBlock>> WILD_FLAX_CODEC = REGISTRAR.register(
-            "wild_flax",
-            () -> BlockBehaviour.simpleCodec(WildFlaxBlock::new)
-    );
 }
