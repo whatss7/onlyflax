@@ -15,7 +15,5 @@
   ],
   "type": "botanypots:block_derived_crop",
   "block": "onlyflax:flax",
-  "input": {
-    "item": "onlyflax:flax_seeds"
-  }
+  "input": "onlyflax:flax_seeds"
 }

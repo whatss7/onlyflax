@@ -7,9 +7,7 @@
   ],
   "type": "enderio:sag_milling",
   "energy": 2400,
-  "input": {
-    "item": "onlyflax:wild_flax"
-  },
+  "input": "onlyflax:wild_flax",
   "outputs": [
     {
       "chance": 1.0,

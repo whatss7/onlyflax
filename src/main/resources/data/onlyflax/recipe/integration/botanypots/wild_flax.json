@@ -15,7 +15,5 @@
   ],
   "type": "botanypots:block_derived_crop",
   "block": "onlyflax:wild_flax",
-  "input": {
-    "item": "onlyflax:wild_flax"
-  }
+  "input": "onlyflax:wild_flax"
 }

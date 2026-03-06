@@ -15,13 +15,13 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(OnlyFlax.MOD_ID);
 
     public static final DeferredBlock<Block> FLAX_CROP = BLOCKS.register("flax",
-            () -> new FlaxCropBlock(FlaxCropBlock.getProperties()));
+            location -> new FlaxCropBlock(FlaxCropBlock.getProperties(location)));
 
     public static final DeferredBlock<Block> WILD_FLAX = BLOCKS.register("wild_flax",
-            () -> new WildFlaxBlock(WildFlaxBlock.getProperties()));
+            location -> new WildFlaxBlock(WildFlaxBlock.getProperties(location)));
 
     public static final DeferredBlock<Block> FLAX_BALE = BLOCKS.register("flax_bale",
-            () -> new FlaxBaleBlock(FlaxBaleBlock.getProperties()));
+            location -> new FlaxBaleBlock(FlaxBaleBlock.getProperties(location)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

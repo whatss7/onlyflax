@@ -3,6 +3,9 @@ package io.github.whatss7.onlyflax.blocks;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
@@ -23,8 +26,9 @@ public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
         super(properties);
     }
 
-    public static BlockBehaviour.Properties getProperties() {
+    public static BlockBehaviour.Properties getProperties(ResourceLocation location) {
         return BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)
+                .setId(ResourceKey.create(Registries.BLOCK, location))
                 .noCollission().instabreak().sound(SoundType.GRASS);
     }
 

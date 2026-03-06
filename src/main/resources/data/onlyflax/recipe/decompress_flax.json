@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "onlyflax:flax_bale"
-    }
+    "onlyflax:flax_bale"
   ],
   "result": {
     "id": "onlyflax:flax",

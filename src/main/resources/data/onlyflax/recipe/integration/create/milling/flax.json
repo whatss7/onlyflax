@@ -7,24 +7,22 @@
   ],
   "type": "create:milling",
   "ingredients": [
-    {
-      "item": "onlyflax:flax"
-    }
+    "onlyflax:flax"
   ],
   "results": [
     {
-      "id": "minecraft:string",
-      "count": 1
-    },
-    {
-      "id": "minecraft:string",
-      "count": 2,
-      "chance": 0.25
-    },
-    {
-      "id": "onlyflax:flax_seeds",
       "count": 1,
-      "chance": 0.25
+      "id": "minecraft:string"
+    },
+    {
+      "count": 2,
+      "chance": 0.25,
+      "id": "minecraft:string"
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "id": "onlyflax:flax_seeds"
     }
   ],
   "processingTime": 150

@@ -13,9 +13,7 @@
     }
   ],
   "type": "thermal:centrifuge",
-  "ingredient": {
-    "item": "onlyflax:flax"
-  },
+  "ingredient": "onlyflax:flax",
   "result": [
     {
       "count": 2,

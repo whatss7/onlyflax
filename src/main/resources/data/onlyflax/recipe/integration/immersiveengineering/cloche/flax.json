@@ -6,9 +6,7 @@
     }
   ],
   "type": "immersiveengineering:cloche",
-  "input": {
-    "item": "onlyflax:flax_seeds"
-  },
+  "input": "onlyflax:flax_seeds",
   "render": {
     "type": "immersiveengineering:crop",
     "block": "onlyflax:flax"
@@ -25,8 +23,6 @@
       }
     }
   ],
-  "soil": {
-    "item": "minecraft:dirt"
-  },
+  "soil": "minecraft:dirt",
   "time": 640
 }

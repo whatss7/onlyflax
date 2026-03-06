@@ -6,12 +6,8 @@
     " R "
   ],
   "key": {
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "B": {
-      "item": "onlyflax:flax_bale"
-    }
+    "R": "minecraft:redstone",
+    "B": "onlyflax:flax_bale"
   },
   "result": {
     "id": "minecraft:target"

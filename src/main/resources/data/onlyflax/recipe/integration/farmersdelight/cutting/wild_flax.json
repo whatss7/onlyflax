@@ -7,13 +7,9 @@
   ],
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "onlyflax:wild_flax"
-    }
+    "onlyflax:wild_flax"
   ],
-  "tool": {
-    "tag": "c:tools/knife"
-  },
+  "tool": "#c:tools/knife",
   "result": [
     {
       "item": {

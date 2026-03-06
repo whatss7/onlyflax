@@ -6,9 +6,7 @@
     "FFF"
   ],
   "key": {
-    "F": {
-      "item": "onlyflax:flax"
-    }
+    "F": "onlyflax:flax"
   },
   "result": {
     "id": "onlyflax:flax_bale"

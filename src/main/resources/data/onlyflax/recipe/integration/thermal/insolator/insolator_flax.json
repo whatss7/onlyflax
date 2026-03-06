@@ -6,9 +6,7 @@
     }
   ],
   "type": "thermal:insolator",
-  "ingredient": {
-    "item": "onlyflax:flax_seeds"
-  },
+  "ingredient": "onlyflax:flax_seeds",
   "result": [
     {
       "item": {
