@@ -3,8 +3,8 @@ package io.github.whatss7.onlyflax.blocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HayBlock;
@@ -19,9 +19,10 @@ public class FlaxBaleBlock extends HayBlock {
         super(properties);
     }
 
-    public static BlockBehaviour.Properties getProperties(ResourceLocation location) {
+    public static BlockBehaviour.Properties getProperties(Identifier identifier) {
         return BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK)
-                .setId(ResourceKey.create(Registries.BLOCK, location)).strength(0.5f).sound(SoundType.GRASS);
+                .setId(ResourceKey.create(Registries.BLOCK, identifier))
+                .strength(0.5f).sound(SoundType.GRASS);
     }
 
     @Override
