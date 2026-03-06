@@ -1,16 +1,5 @@
 {
-  "type": "thermal:centrifuge",
-  "ingredient": {
-    "item": "onlyflax:flax"
-  },
-  "result": [
-    {
-      "item": "minecraft:string",
-      "count": 2
-    }
-  ],
-  "energy": 1600,
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "thermal_expansion"
@@ -22,5 +11,16 @@
         "modid": "thermal_cultivation"
       }
     }
-  ]
+  ],
+  "type": "thermal:centrifuge",
+  "ingredient": {
+    "item": "onlyflax:flax"
+  },
+  "result": [
+    {
+      "item": "minecraft:string",
+      "count": 2
+    }
+  ],
+  "energy": 1600
 }

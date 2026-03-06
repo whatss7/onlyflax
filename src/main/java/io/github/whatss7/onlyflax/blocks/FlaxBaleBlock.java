@@ -12,8 +12,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class FlaxBaleBlock extends HayBlock {
-    FlaxBaleBlock() {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).strength(0.5f).sound(SoundType.GRASS));
+    public FlaxBaleBlock(BlockBehaviour.Properties properties) {
+        super(properties);
+    }
+
+    public static BlockBehaviour.Properties getProperties() {
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).strength(0.5f).sound(SoundType.GRASS);
     }
 
     @Override

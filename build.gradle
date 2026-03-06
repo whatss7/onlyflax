@@ -187,12 +187,14 @@ repositories {
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    runtimeOnly "curse.maven:roughly-enough-items-310111:5846941"
-    runtimeOnly "curse.maven:architectury-api-419699:5173990"
-    runtimeOnly "curse.maven:cloth-config-348521:5729139"
-
+    runtimeOnly "curse.maven:jei-238222:5846848"
     runtimeOnly "curse.maven:jade-324717:5109393"
     runtimeOnly "curse.maven:patchouli-306770:5240286"
+
+    // In case jei is not present
+    // runtimeOnly "curse.maven:roughly-enough-items-310111:5846941"
+    // runtimeOnly "curse.maven:architectury-api-419699:5173990"
+    // runtimeOnly "curse.maven:cloth-config-348521:5729139"
 
     runtimeOnly "curse.maven:bookshelf-228525:5727086"
     runtimeOnly "curse.maven:botany-pots-353928:6002839"
