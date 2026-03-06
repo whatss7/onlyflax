@@ -19,7 +19,7 @@ public class ModItems {
                     ModBlocks.FLAX_CROP.get(),
                     props.overrideDescription("item.onlyflax.flax_seeds")
             ),
-            new Item.Properties()
+            Item.Properties::new
     );
 
     public static final DeferredItem<BlockItem> WILD_FLAX = ITEMS.registerSimpleBlockItem("wild_flax",
