@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
   "type": "mekanism:crushing",
   "input": {
     "count": 1,
@@ -7,11 +13,5 @@
   "output": {
     "count": 2,
     "id": "mekanism:bio_fuel"
-  },
-  "neoforge:conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "mekanism"
-    }
-  ]
+  }
 }

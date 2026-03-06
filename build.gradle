@@ -191,7 +191,7 @@ dependencies {
     runtimeOnly "curse.maven:jade-324717:5591256"
     runtimeOnly "curse.maven:patchouli-306770:6840034"
 
-    runtimeOnly "curse.maven:bookshelf-228525:6412610"
+    // runtimeOnly "curse.maven:bookshelf-228525:6412610"
     // runtimeOnly "curse.maven:botany-pots-353928:6002839" // no 1.21
 
     // runtimeOnly "curse.maven:create-328085:6641603" // no 1.21

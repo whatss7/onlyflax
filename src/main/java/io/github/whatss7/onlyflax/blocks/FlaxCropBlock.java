@@ -8,8 +8,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class FlaxCropBlock extends CropBlock {
-    public FlaxCropBlock() {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT));
+    public FlaxCropBlock(BlockBehaviour.Properties properties) {
+        super(properties);
+    }
+
+    public static BlockBehaviour.Properties getProperties() {
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT);
     }
 
     @NonNull
