@@ -26,7 +26,7 @@ public class WildFlaxBlock extends BushBlock {
     public static BlockBehaviour.Properties getProperties(ResourceLocation location) {
         return BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)
                 .setId(ResourceKey.create(Registries.BLOCK, location))
-                .noCollission().instabreak().sound(SoundType.GRASS);
+                .noCollision().instabreak().sound(SoundType.GRASS);
     }
 
     @Override
