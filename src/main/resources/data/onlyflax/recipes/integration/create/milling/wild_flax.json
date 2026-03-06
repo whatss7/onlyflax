@@ -1,25 +1,32 @@
 {
-  "type": "create:milling",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "onlyflax:wild_flax"
-    }
-  ],
-  "results": [
-    {
-      "item": "onlyflax:flax_seeds",
-      "count": 1
-    },
-    {
-      "item": "minecraft:light_blue_dye",
-      "count": 1
-    }
-  ],
-  "processingTime": 50,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "create"
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "create:milling",
+        "ingredients": [
+          {
+            "item": "onlyflax:wild_flax"
+          }
+        ],
+        "results": [
+          {
+            "item": "onlyflax:flax_seeds",
+            "count": 1
+          },
+          {
+            "item": "minecraft:light_blue_dye",
+            "count": 1
+          }
+        ],
+        "processingTime": 50
+      }
     }
   ]
 }

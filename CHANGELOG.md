@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Fixed recipe loading errors when optional mods are not present
+
 ## 1.0.3
 
 - Added Ender IO integration

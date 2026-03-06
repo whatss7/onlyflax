@@ -1,31 +1,38 @@
 {
-  "type": "create:milling",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "onlyflax:flax"
-    }
-  ],
-  "results": [
-    {
-      "item": "minecraft:string",
-      "count": 1
-    },
-    {
-      "item": "minecraft:string",
-      "count": 2,
-      "chance": 0.25
-    },
-    {
-      "item": "onlyflax:flax_seeds",
-      "count": 1,
-      "chance": 0.25
-    }
-  ],
-  "processingTime": 150,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "create"
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "create:milling",
+        "ingredients": [
+          {
+            "item": "onlyflax:flax"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:string",
+            "count": 1
+          },
+          {
+            "item": "minecraft:string",
+            "count": 2,
+            "chance": 0.25
+          },
+          {
+            "item": "onlyflax:flax_seeds",
+            "count": 1,
+            "chance": 0.25
+          }
+        ],
+        "processingTime": 150
+      }
     }
   ]
 }

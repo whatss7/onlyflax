@@ -1,27 +1,34 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "onlyflax:wild_flax"
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "onlyflax:flax_seeds"
-    },
-    {
-      "item": "minecraft:light_blue_dye",
-      "count": 2,
-      "chance": 0.5
-    }
-  ],
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "farmersdelight"
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "onlyflax:wild_flax"
+          }
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        },
+        "result": [
+          {
+            "item": "onlyflax:flax_seeds"
+          },
+          {
+            "item": "minecraft:light_blue_dye",
+            "count": 2,
+            "chance": 0.5
+          }
+        ]
+      }
     }
   ]
 }

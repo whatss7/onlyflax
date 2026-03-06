@@ -1,27 +1,34 @@
 {
-  "conditions": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "immersiveengineering"
-    }
-  ],
-  "type": "immersiveengineering:crusher",
-  "secondaries": [
-    {
-      "chance": 1.0,
-      "output": {
-        "item": "minecraft:light_blue_dye",
-        "count": 1
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "immersiveengineering"
+        }
+      ],
+      "recipe": {
+        "type": "immersiveengineering:crusher",
+        "secondaries": [
+          {
+            "chance": 1.0,
+            "output": {
+              "item": "minecraft:light_blue_dye",
+              "count": 1
+            }
+          }
+        ],
+        "result": {
+          "base_ingredient": {
+            "item": "onlyflax:flax_seeds"
+          }
+        },
+        "input": {
+          "item": "onlyflax:wild_flax"
+        },
+        "energy": 3200
       }
     }
-  ],
-  "result": {
-    "base_ingredient": {
-      "item": "onlyflax:flax_seeds"
-    }
-  },
-  "input": {
-    "item": "onlyflax:wild_flax"
-  },
-  "energy": 3200
+  ]
 }

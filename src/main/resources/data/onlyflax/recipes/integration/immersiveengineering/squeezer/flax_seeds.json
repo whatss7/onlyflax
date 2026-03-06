@@ -1,17 +1,24 @@
 {
-  "type":"immersiveengineering:squeezer",
-  "fluid": {
-    "fluid": "immersiveengineering:plantoil",
-    "amount": 100
-  },
-  "input": {
-    "item": "onlyflax:flax_seeds"
-  },
-  "energy": 6400,
-  "conditions": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "immersiveengineering"
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "immersiveengineering"
+        }
+      ],
+      "recipe": {
+        "type": "immersiveengineering:squeezer",
+        "fluid": {
+          "fluid": "immersiveengineering:plantoil",
+          "amount": 100
+        },
+        "input": {
+          "item": "onlyflax:flax_seeds"
+        },
+        "energy": 6400
+      }
     }
   ]
 }
