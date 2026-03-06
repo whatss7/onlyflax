@@ -19,10 +19,13 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
-    public static final MapCodec<WildFlaxBlock> CODEC = MapCodec.unit(WildFlaxBlock::new);
+    public WildFlaxBlock(BlockBehaviour.Properties properties) {
+        super(properties);
+    }
 
-    public WildFlaxBlock() {
-        super(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS));
+    public static BlockBehaviour.Properties getProperties() {
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)
+                .noCollission().instabreak().sound(SoundType.GRASS);
     }
 
     @Override
@@ -68,6 +71,6 @@ public class WildFlaxBlock extends BushBlock implements BonemealableBlock {
     @Override
     @NotNull
     protected MapCodec<? extends BushBlock> codec() {
-        return CODEC;
+        return ModBlocks.WILD_FLAX_CODEC.get();
     }
 }
