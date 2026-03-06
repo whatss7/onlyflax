@@ -1,12 +1,18 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
   "type": "immersiveengineering:cloche",
   "results": [
     {
       "item": "onlyflax:flax"
     },
     {
-      "item":"onlyflax:flax_seeds",
-      "count":2
+      "item": "onlyflax:flax_seeds",
+      "count": 2
     }
   ],
   "input": {
@@ -17,13 +23,7 @@
   },
   "time": 640,
   "render": {
-    "type":"crop",
-    "block":"onlyflax:flax"
-  },
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "immersiveengineering"
-    }
-  ]
+    "type": "crop",
+    "block": "onlyflax:flax"
+  }
 }

@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
@@ -16,12 +22,6 @@
       "item": "minecraft:light_blue_dye",
       "count": 2,
       "chance": 0.5
-    }
-  ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "farmersdelight"
     }
   ]
 }
