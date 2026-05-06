@@ -1,6 +1,5 @@
 package io.github.whatss7.onlyflax.modifiers;
 
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import io.github.whatss7.onlyflax.OnlyFlax;
 import net.neoforged.bus.api.IEventBus;
@@ -8,12 +7,13 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import org.jetbrains.annotations.NotNull;
 
 public class ModBiomeModifiers {
     public static final DeferredRegister<MapCodec<? extends BiomeModifier>> BIOME_MODIFIERS = DeferredRegister
             .create(NeoForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, OnlyFlax.MOD_ID);
 
-    public static final DeferredHolder<MapCodec<? extends BiomeModifier>, MapCodec<WildFlaxBiomeModifier>> WILD_FLAX_BIOME_MODIFIER =
+    public static final DeferredHolder<MapCodec<? extends BiomeModifier>, @NotNull MapCodec<WildFlaxBiomeModifier>> WILD_FLAX_BIOME_MODIFIER =
             BIOME_MODIFIERS.register("add_wild_flax_feature", () -> WildFlaxBiomeModifier.CODEC);
 
     public static void register(IEventBus eventBus) {
