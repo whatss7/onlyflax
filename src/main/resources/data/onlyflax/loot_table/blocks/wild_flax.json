@@ -2,66 +2,47 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "seed_drop",
-      "rolls": 1,
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": ["minecraft:shears"]
-            }
-          }
-        }
-      ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "onlyflax:flax_seeds",
-          "functions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 2
-              }
+              "type": "minecraft:item",
+              "condition": "minecraft:tool/can_shear",
+              "name": "onlyflax:wild_flax"
             },
             {
-              "function": "minecraft:explosion_decay"
+              "type": "minecraft:group",
+              "modifier": {
+                "type": "minecraft:explosion_decay"
+              },
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": "onlyflax:flax_seeds",
+                  "modifier": {
+                    "type": "minecraft:apply_bonus",
+                    "enchantment": "minecraft:fortune",
+                    "formula": "minecraft:uniform_bonus_count",
+                    "parameters": {
+                      "bonusMultiplier": 2
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:item",
+                  "condition": {
+                    "type": "minecraft:random_chance",
+                    "chance": 0.125
+                  },
+                  "name": "onlyflax:flax"
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.2
-            }
-          ],
-          "name": "onlyflax:flax"
-        }
-      ]
-    },
-    {
-      "name": "crop_drop",
-      "rolls": 1,
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "items": ["minecraft:shears"]
-          }
         }
       ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "onlyflax:wild_flax"
-        }
-      ]
+      "rolls": 1
     }
   ]
 }

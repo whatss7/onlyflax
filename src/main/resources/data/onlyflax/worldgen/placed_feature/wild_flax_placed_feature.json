@@ -1,5 +1,5 @@
 {
-  "feature": "onlyflax:wild_flax_configured_feature",
+  "feature": "onlyflax:wild_flax_feature",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
@@ -17,16 +17,21 @@
       "count": 16
     },
     {
-      "type": "minecraft:random_offset",
-      "xz_spread": {
+      "type": "minecraft:offset",
+      "x": {
         "type": "minecraft:uniform",
         "min_inclusive": -4,
         "max_inclusive": 4
       },
-      "y_spread": {
+      "y": {
         "type": "minecraft:uniform",
         "min_inclusive": -2,
         "max_inclusive": 2
+      },
+      "z": {
+        "type": "minecraft:uniform",
+        "min_inclusive": -4,
+        "max_inclusive": 4
       }
     },
     {

@@ -1,10 +1,9 @@
 {
   "item.onlyflax.flax": "Linho",
-  "item.onlyflax.flax_bale": "Fardo de linho",
   "item.onlyflax.flax_seeds": "Sementes de linho",
-  "item.onlyflax.wild_flax": "Linho selvagem",
 
   "block.onlyflax.flax": "Linho",
   "block.onlyflax.flax_bale": "Fardo de linho",
+  "block.onlyflax.flax_straw_bed": "Cama de palha de linho",
   "block.onlyflax.wild_flax": "Linho selvagem"
 }

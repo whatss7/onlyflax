@@ -2,7 +2,7 @@ package io.github.whatss7.onlyflax;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-public class OnlyFlaxConfig {
+public final class OnlyFlaxConfig {
 
     public static final ModConfigSpec COMMON_SPEC;
     public static final Common COMMON;

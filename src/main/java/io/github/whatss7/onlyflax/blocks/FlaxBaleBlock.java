@@ -8,9 +8,9 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HayBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.MapColor;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -20,9 +20,8 @@ public class FlaxBaleBlock extends HayBlock {
     }
 
     public static BlockBehaviour.Properties getProperties(Identifier identifier) {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK)
-                .setId(ResourceKey.create(Registries.BLOCK, identifier))
-                .strength(0.5f).sound(SoundType.GRASS);
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).mapColor(MapColor.PLANT)
+                .setId(ResourceKey.create(Registries.BLOCK, identifier));
     }
 
     @Override

@@ -1,68 +1,58 @@
 {
   "type": "minecraft:block",
+  "modifier": {
+    "type": "minecraft:explosion_decay"
+  },
   "pools": [
     {
-      "name": "seed_drop",
-      "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "onlyflax:flax_seeds"
-        }
-      ]
-    },
-    {
-      "name": "ripe_flax_drop",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "onlyflax:flax"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "onlyflax:flax",
-          "properties": { "age": "7" }
-        }
-      ]
-    },
-    {
-      "name": "ripe_seed_drop",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "onlyflax:flax_seeds",
-          "functions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:binomial",
-                "n": 3,
-                "p": 0.571428
-              }
+              "type": "minecraft:item",
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "onlyflax:flax",
+                "state": {
+                  "age": "7"
+                }
+              },
+              "name": "onlyflax:flax"
             },
             {
-              "function": "minecraft:explosion_decay"
-            },
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "binomial_with_bonus_count",
-              "parameters": { "extra": 0, "probability": 0.571428 }
+              "type": "minecraft:item",
+              "name": "onlyflax:flax_seeds"
             }
           ]
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "onlyflax:flax",
-          "properties": { "age": "7" }
+      "rolls": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "onlyflax:flax",
+        "state": {
+          "age": "7"
         }
-      ]
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:binomial_with_bonus_count",
+            "parameters": {
+              "extra": 3,
+              "probability": 0.5714286
+            }
+          },
+          "name": "onlyflax:flax_seeds"
+        }
+      ],
+      "rolls": 1
     }
   ]
 }

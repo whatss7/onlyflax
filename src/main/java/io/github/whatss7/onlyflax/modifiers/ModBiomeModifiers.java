@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
-public class ModBiomeModifiers {
+public final class ModBiomeModifiers {
     public static final DeferredRegister<MapCodec<? extends BiomeModifier>> BIOME_MODIFIERS = DeferredRegister
             .create(NeoForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, OnlyFlax.MOD_ID);
 

@@ -1,10 +1,9 @@
 {
   "item.onlyflax.flax": "フラックス",
-  "item.onlyflax.flax_bale": "フラックスの俵",
   "item.onlyflax.flax_seeds": "フラックスの種",
-  "item.onlyflax.wild_flax": "野生のフラックス",
 
   "block.onlyflax.flax": "フラックス",
   "block.onlyflax.flax_bale": "フラックスの俵",
+  "block.onlyflax.flax_straw_bed": "フラックスのベッド",
   "block.onlyflax.wild_flax": "野生のフラックス"
 }

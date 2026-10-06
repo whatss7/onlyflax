@@ -8,6 +8,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
 
 public class FlaxCropBlock extends CropBlock {
@@ -16,7 +17,7 @@ public class FlaxCropBlock extends CropBlock {
     }
 
     public static BlockBehaviour.Properties getProperties(Identifier identifier) {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).mapColor(MapColor.PLANT)
                 .setId(ResourceKey.create(Registries.BLOCK, identifier));
     }
 

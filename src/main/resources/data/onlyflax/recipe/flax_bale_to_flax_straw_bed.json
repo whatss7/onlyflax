@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB"
+  ],
+  "key": {
+    "B": "onlyflax:flax_bale"
+  },
+  "result": {
+    "id": "onlyflax:flax_straw_bed"
+  }
+}

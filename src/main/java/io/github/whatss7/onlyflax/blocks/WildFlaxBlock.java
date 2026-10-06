@@ -5,16 +5,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BonemealSource;
 import net.minecraft.world.level.block.BushBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.MapColor;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -24,9 +23,8 @@ public class WildFlaxBlock extends BushBlock {
     }
 
     public static BlockBehaviour.Properties getProperties(Identifier identifier) {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)
-                .setId(ResourceKey.create(Registries.BLOCK, identifier))
-                .noCollision().instabreak().sound(SoundType.GRASS);
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).mapColor(MapColor.PLANT)
+                .setId(ResourceKey.create(Registries.BLOCK, identifier));
     }
 
     @Override
@@ -43,29 +41,7 @@ public class WildFlaxBlock extends BushBlock {
 
     @Override
     @ParametersAreNonnullByDefault
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
-        return true;
-    }
-
-    @Override
-    @ParametersAreNonnullByDefault
-    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
-        return randomSource.nextFloat() < 0.2F;
-    }
-
-    @Override
-    @ParametersAreNonnullByDefault
-    public void performBonemeal(ServerLevel level, RandomSource randomSource, BlockPos pos, BlockState state) {
-        for (int tries = 0; tries < 5; tries++) {
-            int dx = randomSource.nextInt(3) - 1;
-            int dy = randomSource.nextInt(3) - 1;
-            int dz = randomSource.nextInt(3) - 1;
-            BlockPos randomPos = pos.offset(dx, dy, dz);
-
-            if (level.isEmptyBlock(randomPos) && state.canSurvive(level, randomPos)) {
-                level.setBlock(randomPos, this.defaultBlockState(), 2);
-                break;
-            }
-        }
+    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state, BonemealSource source) {
+        return random.nextFloat() < 0.2F;
     }
 }

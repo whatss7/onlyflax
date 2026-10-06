@@ -1,10 +1,9 @@
 {
   "item.onlyflax.flax": "亚麻",
-  "item.onlyflax.flax_bale": "亚麻捆",
   "item.onlyflax.flax_seeds": "亚麻种子",
-  "item.onlyflax.wild_flax": "野生亚麻",
 
   "block.onlyflax.flax": "亚麻",
   "block.onlyflax.flax_bale": "亚麻捆",
+  "block.onlyflax.flax_straw_bed": "亚麻秆床",
   "block.onlyflax.wild_flax": "野生亚麻"
 }
