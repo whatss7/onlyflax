@@ -193,8 +193,8 @@ repositories {
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    runtimeOnly "curse.maven:jei-238222:8990341"
-    runtimeOnly "curse.maven:jade-324717:8892782"
+    runtimeOnly "curse.maven:jei-238222:9068073"
+    runtimeOnly "curse.maven:jade-324717:9042207"
     // runtimeOnly "curse.maven:patchouli-306770:6842247" // no 26.3
 
     // In case jei is not present

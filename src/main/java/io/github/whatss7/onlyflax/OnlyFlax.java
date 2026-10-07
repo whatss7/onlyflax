@@ -14,7 +14,7 @@ public final class OnlyFlax {
 
     public OnlyFlax(ModContainer container, IEventBus modBus) {
         // Load config
-        container.registerConfig(ModConfig.Type.COMMON, OnlyFlaxConfig.COMMON_SPEC);
+        container.registerConfig(ModConfig.Type.LOCAL, OnlyFlaxConfig.COMMON_SPEC);
 
         // Register items & blocks
         ModBlocks.register(modBus);
